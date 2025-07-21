@@ -125,31 +125,37 @@ export default function Dashboard() {
       </section>
 
       <section className="action-cards">
-      <button className="action-card">
-        <span className="action-card-icon">
-          <img src={Ats} alt="Ats Score" className = 'img'/>
-        </span>
-        <span>
-          Scan your resume for ATS compatibility, keyword match, and formatting. Get instant AI feedback to improve and stand out.
-        </span>
-      </button>
-      <button className="action-card">
-        <span className="action-card-icon">
-          <img src={coverl} alt="Cover letter" className = 'img'/>
-        </span>
-        <span>
-          Generate a personalized cover letter from your resume and job description. Save time and apply with confidence.
-        </span>
-      </button>
-      <button className="action-card">
-        <span className="action-card-icon">
-          <img src={interview} alt="Interview icon" className = 'img'/>
-        </span>
-        <span>
-          Practice with AI-powered mock interviews tailored to your role. Get instant feedback and boost your confidence.
-        </span>
-      </button>
-    </section>
+  <button className="action-card">
+    <span className="action-card-icon">
+      <img src={Ats} alt="ATS Score" className="img" />
+    </span>
+    <span className="action-card-text">
+      Scan your resume for ATS compatibility, keyword match, and formatting. Get instant AI feedback to improve and stand out.
+    </span>
+    <span className="action-card-arrow">➤</span>
+  </button>
+
+  <button className="action-card">
+    <span className="action-card-icon">
+      <img src={coverl} alt="Cover letter" className="img" />
+    </span>
+    <span className="action-card-text">
+      Generate a personalized cover letter from your resume and job description. Save time and apply with confidence.
+    </span>
+    <span className="action-card-arrow">➤</span>
+  </button>
+
+  <button className="action-card">
+    <span className="action-card-icon">
+      <img src={interview} alt="Interview icon" className="img" />
+    </span>
+    <span className="action-card-text">
+      Practice with AI-powered mock interviews tailored to your role. Get instant feedback and boost your confidence.
+    </span>
+    <span className="action-card-arrow">➤</span>
+  </button>
+</section>
+
 
       <footer className="dashboard-footer">
         <div className="footer-content">

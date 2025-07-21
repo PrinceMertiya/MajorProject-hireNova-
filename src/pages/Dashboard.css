@@ -211,47 +211,61 @@ button {
   font-weight: 600;
 }
 
-/* ========== Action Cards Section ========== */
 .action-cards {
+  padding: 60px 40px;
+  background-color: #070606;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .action-card {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  background: #222;             /* dark background for contrast */
-  color: #fff;
-  border: none;                 /* remove button border */
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  font-size: 1.1rem;
-  cursor: pointer;
-  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+  background-color: transparent;
+  border: 1px solid #4c4c56;
+  border-radius: 10px;
+  padding: 20px 25px;
+  color: #f9f9f9;
+  text-align: left;
+  gap: 25px;
+  transition: 0.3s ease;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .action-card:hover {
-  box-shadow: 0 6px 32px rgba(0,0,0,0.35);
-  background: #333;
-  transform: translateY(-2px) scale(1.02);
+  background-color: #1c1c27;
+  border-color: #7c3aed;
 }
 
 .action-card-icon {
-  font-size: 2.8rem;
-  display: flex;
-  align-items: center;
-  min-width: 3.5rem;
-  justify-content: center;
-}
-.img{
-  height: 125px;
-  width:125px;
+  flex-shrink: 0;
 }
 
+.action-card-icon img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.action-card-text {
+  flex: 1;
+  line-height: 1.6;
+}
+
+.action-card-arrow {
+  font-size: 20px;
+  color: #aaa;
+  transition: transform 0.3s ease;
+}
+
+.action-card:hover .action-card-arrow {
+  transform: translateX(5px);
+  color: #7c3aed;
+}
 /* ========== Footer ========== */
 .dashboard-footer {
   background-color: #070606;
@@ -264,6 +278,8 @@ button {
 .footer-content {
   display: flex;
   flex-wrap: wrap;
+  width : 1450px;
+  height:250px;
   background-color: #373738;
   justify-content: space-between;
   max-width: 1200px;
