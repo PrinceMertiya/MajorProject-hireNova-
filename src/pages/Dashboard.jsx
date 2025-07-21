@@ -1,7 +1,16 @@
 import React from "react";
 import waveBg from "../images/rectangle-wave.png";
-import resumeImg from "../images/resumeholder.png"; 
-import "./Dashboard.css"; 
+import resumeImg from "../images/resumeholder.png";
+import DetailImg from "../images/Detail.png";
+import resume from "../images/icons/resume.png";
+import coverLetter from "../images/icons/coverletter.png";
+import skillGap from "../images/icons/skillgap.png";
+import careerGuidance from "../images/icons/carrer.png";
+import interview from "../images/icons/interview.png";
+import Ats from "../images/icons/speedometer.png";
+import coverl from "../images/icons/coverl.png";
+
+import "./Dashboard.css";
 
 export default function Dashboard() {
   return (
@@ -9,101 +18,139 @@ export default function Dashboard() {
       {/* Header */}
       <header className="dashboard-header">
         <div className="hero-container">
-        <img src={waveBg} alt="Wave Background" className="hero-wave-bg" />
-      <header className="hero-header">
-        <div className="logo">LOGO</div>
-        <nav>
-          <a href="#">Home</a>
-          <a href="#">Resume</a>
-          <a href="#">Support</a>
-          <button className="login-btn">Login</button>
-        </nav>
-      </header>
+          <img src={waveBg} alt="Wave Background" className="hero-wave-bg" />
+          <header className="hero-header">
+            <div className="logo">LOGO</div>
+            <nav>
+              <a href="#">Home</a>
+              <a href="#">Resume</a>
+              <a href="#">Support</a>
+              <button className="login-btn">Login</button>
+            </nav>
+          </header>
 
-      <section className="hero-section">
-        {/* Wave background */}
-
-        <div className="hero-content">
-          <div className="hero-left">
-            <h1>Scan Your Resume.</h1>
-            <p><strong>Strengthen Your Future.</strong></p>
-            <div className="hero-buttons">
-              <button className="btn-primary">Get Started</button>
-              <button className="btn-secondary">Learn More</button>
+          <section className="hero-section">
+            <div className="hero-content">
+              <div className="hero-left">
+                <h1>Scan Your Resume.</h1>
+                <p>
+                  <strong>Strengthen Your Future.</strong>
+                </p>
+                <div className="hero-buttons">
+                  <button className="btn-primary">Get Started</button>
+                  <button className="btn-secondary">Learn More</button>
+                </div>
+              </div>
+              <div className="hero-right">
+                <img src={resumeImg} alt="Resume Holder" />
+              </div>
+              <div className="hero-detail">
+                <img src={DetailImg} alt="Detailes" />
+              </div>
             </div>
-          </div>
-          <div className="hero-right">
-            <img src={resumeImg} alt="Resume Holder" />
-          </div>
-        </div>
-      </section>
-    </div>
-    </header>
+          </section>
 
-      
+        </div>
+
+
+      </header>
 
       {/* Services Section */}
       <section className="services-section">
-        <div className="service-card">
-          <div className="service-card-icon"><span role="img" aria-label="Resume">📄</span></div>
+  <div className="service-card">
+    <div className="service-card-icon">
+      <div className="icon-wrapper">
+        <img src={resume} alt="Resume icon" />
+      </div>
+    </div>
+    <div>
+      <h2>Resume & ATS Optimize</h2>
+      <p className="texte">
+        Craft job-ready, ATS-friendly resumes with real-time AI feedback and keyword enhancement.
+      </p>
+    </div>
+  </div>
+  <div className="service-card">
+    <div className="service-card-icon">
+      <div className="icon-wrapper">
+        <img src={coverLetter} alt="Cover letter icon" />
+      </div>
+    </div>
+    <div>
+      <h2>Cover Letter</h2>
+      <p className="texte">
+        Generate personalized, editable cover letters tailored to the job you’re applying for.
+      </p>
+    </div>
+  </div>
+  <div className="service-card">
+    <div className="service-card-icon">
+      <div className="icon-wrapper">
+        <img src={skillGap} alt="Skill gap icon" />
+      </div>
+    </div>
+    <div>
+      <h2>Skill Gap</h2>
+      <p className="texte">
+        Identify missing skills or tools by comparing your resume with job descriptions instantly.
+      </p>
+    </div>
+  </div>
+  <div className="service-card">
+    <div className="service-card-icon">
+      <div className="icon-wrapper">
+        <img src={careerGuidance} alt="Career guidance icon" />
+            </div>
+          </div>
           <div>
-            <h3>Resume & ATTS Optimize</h3>
-            <p>Craft job-ready, ATS-friendly resumes with real-time AI feedback and keyword enhancement.</p>
+            <h2>Career Guidance</h2>
+            <p className="texte">
+              Get smart role suggestions and learning paths based on your profile and market trends.
+            </p>
           </div>
         </div>
         <div className="service-card">
-          <div className="service-card-icon"><span role="img" aria-label="Cover Letter">📝</span></div>
-          <div>
-            <h3>Cover Letter</h3>
-            <p>Generate personalized, editable cover letters tailored to the job you’re applying for.</p>
+          <div className="service-card-icon">
+            <div className="icon-wrapper">
+              <img src={interview} alt="Interview preparation icon" />
+            </div>
           </div>
-        </div>
-        <div className="service-card">
-          <div className="service-card-icon"><span role="img" aria-label="Skill Gap">📋</span></div>
           <div>
-            <h3>Skill Gap</h3>
-            <p>Identify missing skills or tools by comparing your resume with job descriptions instantly.</p>
-          </div>
-        </div>
-        <div className="service-card">
-          <div className="service-card-icon"><span role="img" aria-label="Career Guidance">🌐</span></div>
-          <div>
-            <h3>Career Guidance</h3>
-            <p>Get smart role suggestions and learning paths based on your profile and market trends.</p>
-          </div>
-        </div>
-        <div className="service-card">
-          <div className="service-card-icon"><span role="img" aria-label="Interview">🏆</span></div>
-          <div>
-            <h3>Interview Preparation</h3>
-            <p>Practice mock interviews with AI-generated questions and receive instant feedback.</p>
+            <h2>Interview Preparation</h2>
+            <p className="texte">
+              Practice mock interviews with AI-generated questions and receive instant feedback.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Action Cards Section */}
       <section className="action-cards">
-        <div className="action-card">
-          <span className="action-card-icon">🕹️</span>
-          <span>
-            Scan your resume for ATS compatibility, keyword match, and formatting. Get instant AI feedback to improve and stand out.
-          </span>
-        </div>
-        <div className="action-card">
-          <span className="action-card-icon">✉️</span>
-          <span>
-            Generate a personalized cover letter from your resume and job description. Save time and apply with confidence.
-          </span>
-        </div>
-        <div className="action-card">
-          <span className="action-card-icon">🏆</span>
-          <span>
-            Practice with AI-powered mock interviews tailored to your role. Get instant feedback and boost your confidence.
-          </span>
-        </div>
-      </section>
+      <button className="action-card">
+        <span className="action-card-icon">
+          <img src={Ats} alt="Ats Score" className = 'img'/>
+        </span>
+        <span>
+          Scan your resume for ATS compatibility, keyword match, and formatting. Get instant AI feedback to improve and stand out.
+        </span>
+      </button>
+      <button className="action-card">
+        <span className="action-card-icon">
+          <img src={coverl} alt="Cover letter" className = 'img'/>
+        </span>
+        <span>
+          Generate a personalized cover letter from your resume and job description. Save time and apply with confidence.
+        </span>
+      </button>
+      <button className="action-card">
+        <span className="action-card-icon">
+          <img src={interview} alt="Interview icon" className = 'img'/>
+        </span>
+        <span>
+          Practice with AI-powered mock interviews tailored to your role. Get instant feedback and boost your confidence.
+        </span>
+      </button>
+    </section>
 
-      {/* Footer */}
       <footer className="dashboard-footer">
         <div className="footer-content">
           <div className="footer-column contact-column">

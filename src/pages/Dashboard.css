@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #0d0c11;
+  background-color: #070606;
   color: #ffffff;
 }
 
@@ -52,7 +52,7 @@ button {
 .hero-header .logo {
   font-size: 26px;
   font-weight: 700;
-  color: #fff;
+  color: #fefefe;
 }
 
 .hero-header nav {
@@ -64,7 +64,7 @@ button {
   background-color: #a78bfa;
   border: none;
   padding: 8px 18px;
-  border-radius: 20px;
+  border-radius: 13px;
   color: #fff;
   font-weight: 600;
   margin-left: 20px;
@@ -147,17 +147,19 @@ button {
 
 .hero-right img {
   width: 100%;
-  max-width: 700px; /* Increased from 400px to 500px */
+  max-width: 650px; /* Increased from 400px to 500px */
+}
+.hero-detail img {
+  width: 100%;
+  max-width: 850px; /* Increased from 400px to 500px */
 }
 
-
-/* ========== Services Section ========== */
 .services-section {
-  background-color: #0d0c11;
+  background-color: #070606;
   padding: 60px 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 50px; /* Adjust this value for more or less gap */
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -165,11 +167,12 @@ button {
 .service-card {
   display: flex;
   gap: 16px;
-  background-color: #1e1e29;
-  padding: 20px;
-  border-radius: 10px;
+  padding: 24px;
+  border-radius: 12px;
   align-items: center;
-  transition: 0.3s ease;
+  background: #070606;
+  box-shadow: 0 8px 28px 0 rgba(16,20,40,0.08);
+  transition: background 0.3s ease;
 }
 
 .service-card:hover {
@@ -180,36 +183,78 @@ button {
   font-size: 30px;
 }
 
+.icon-wrapper {
+  width: 130px;
+  height: 130px;
+  background-color: #23232b;
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-wrapper img {
+  width: 60px;
+  height: 60px;
+}
+
+.texte {
+  color: #b9bac5;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.service-card h2 {
+  color: #f5f6fa;
+  font-size: 1.15rem;
+  margin: 0 0 8px 0;
+  font-weight: 600;
+}
+
 /* ========== Action Cards Section ========== */
 .action-cards {
-  padding: 60px 40px;
-  background-color: #0d0c11;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  max-width: 1200px;
-  margin: 0 auto;
+  gap: 2rem;
+  margin: 2rem 0;
 }
 
 .action-card {
   display: flex;
-  gap: 20px;
-  background-color: #1a1a23;
-  padding: 24px 30px;
-  border-left: 4px solid #7c3aed;
-  border-radius: 12px;
   align-items: center;
-  font-weight: 500;
-  color: #f3f4f6;
+  gap: 1.5rem;
+  background: #222;             /* dark background for contrast */
+  color: #fff;
+  border: none;                 /* remove button border */
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s, transform 0.2s, background 0.2s;
+}
+
+.action-card:hover {
+  box-shadow: 0 6px 32px rgba(0,0,0,0.35);
+  background: #333;
+  transform: translateY(-2px) scale(1.02);
 }
 
 .action-card-icon {
-  font-size: 30px;
+  font-size: 2.8rem;
+  display: flex;
+  align-items: center;
+  min-width: 3.5rem;
+  justify-content: center;
+}
+.img{
+  height: 125px;
+  width:125px;
 }
 
 /* ========== Footer ========== */
 .dashboard-footer {
-  background-color: #1a1a23;
+  background-color: #070606;
   padding: 50px 40px 20px;
   color: #d1d5db;
   position: relative;
@@ -219,6 +264,7 @@ button {
 .footer-content {
   display: flex;
   flex-wrap: wrap;
+  background-color: #373738;
   justify-content: space-between;
   max-width: 1200px;
   margin: 0 auto;
