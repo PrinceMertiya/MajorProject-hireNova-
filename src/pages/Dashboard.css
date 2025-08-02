@@ -38,48 +38,12 @@ button {
   z-index: 10;
 }
 
-.hero-container {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
-.hero-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.hero-header .logo {
-  font-size: 26px;
-  font-weight: 700;
-  color: #fefefe;
-}
-
-.hero-header nav {
-  display: flex;
-  align-items: center;
-}
-
-.login-btn {
-  background-color: #a78bfa;
-  border: none;
-  padding: 8px 18px;
-  border-radius: 13px;
-  color: #fff;
-  font-weight: 600;
-  margin-left: 20px;
-  transition: 0.3s ease;
-}
-
-.login-btn:hover {
-  background-color: #7c3aed;
-}
 
 /* ========== Hero Section ========== */
 .hero-section {
   position: relative;
   background-color: #070606;
-  padding: 80px 40px 60px;
+  padding: 75px 30px 50px;
   overflow: hidden;
 }
 
@@ -267,71 +231,3 @@ button {
   color: #7c3aed;
 }
 /* ========== Footer ========== */
-.dashboard-footer {
-  background-color: #070606;
-  padding: 50px 40px 20px;
-  color: #d1d5db;
-  position: relative;
-  margin-top: 40px;
-}
-
-.footer-content {
-  display: flex;
-  flex-wrap: wrap;
-  width : 1450px;
-  height:250px;
-  background-color: #373738;
-  justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.footer-column {
-  margin-bottom: 30px;
-}
-
-.footer-column h4,
-.footer-column h5 {
-  margin-bottom: 16px;
-  font-size: 16px;
-  color: #ffffff;
-}
-
-.footer-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.footer-column ul li {
-  margin-bottom: 8px;
-  font-size: 14px;
-}
-
-.contact-buttons {
-  display: flex;
-  gap: 12px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
-
-.contact-buttons button {
-  padding: 8px 16px;
-  background-color: #2e2e38;
-  color: #ffffff;
-  border-radius: 6px;
-  font-size: 14px;
-}
-
-.contact-info div {
-  font-size: 14px;
-  margin-bottom: 6px;
-}
-
-.footer-bottom {
-  text-align: center;
-  font-size: 14px;
-  border-top: 1px solid #2f2f2f;
-  padding-top: 20px;
-  margin-top: 30px;
-  color: #aaa;
-}

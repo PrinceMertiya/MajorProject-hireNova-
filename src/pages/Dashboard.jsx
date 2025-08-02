@@ -9,57 +9,65 @@ import careerGuidance from "../images/icons/carrer.png";
 import interview from "../images/icons/interview.png";
 import Ats from "../images/icons/speedometer.png";
 import coverl from "../images/icons/coverl.png";
-
+import Footer from '../components/footer.jsx';
+import Header from '../components/header.jsx';
 import "./Dashboard.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Dashboard() {
+  const navigate = useNavigate();
   return (
     <div className="dashboard">
-      {/* Header */}
-      <header className="dashboard-header">
-        <div className="hero-container">
-          <img src={waveBg} alt="Wave Background" className="hero-wave-bg" />
-          <header className="hero-header">
-            <div className="logo">LOGO</div>
-            <nav>
-              <a href="#">Home</a>
-              <a href="#">Resume</a>
-              <a href="#">Support</a>
-              <button className="login-btn">Login</button>
-            </nav>
-          </header>
+      <div className="dashboard-header">
+        <Header />
 
-          <section className="hero-section">
-            <div className="hero-content">
-              <div className="hero-left">
-                <h1>Scan Your Resume.</h1>
-                <p>
-                  <strong>Strengthen Your Future.</strong>
-                </p>
-                <div className="hero-buttons">
-                  <button className="btn-primary">Get Started</button>
-                  <button className="btn-secondary">Learn More</button>
-                </div>
-              </div>
-              <div className="hero-right">
-                <img src={resumeImg} alt="Resume Holder" />
-              </div>
-              <div className="hero-detail">
-                <img src={DetailImg} alt="Detailes" />
-              </div>
-            </div>
-          </section>
+  {/* Second header for hero wave background */}
+  <header className="hero-wave-header">
+    <div className="hero-container">
+      <img src={waveBg} alt="Wave Background" className="hero-wave-bg" />
+    </div>
+  </header>
 
+  {/* Hero Section Content */}
+  <section className="hero-section">
+    <div className="hero-content">
+      <div className="hero-left">
+        <h1>Scan Your Resume.</h1>
+        <p><strong>Strengthen Your Future.</strong></p>
+        <div className="hero-buttons">
+          <button className="btn-primary" onClick={() => navigate('/resume')}>
+                  Get Started
+                </button>           
+                <button
+          className="btn-secondary"
+          onClick={() => {
+            const servicesSection = document.getElementById("services");
+            if (servicesSection) {
+              servicesSection.scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                      >
+              Learn More
+            </button>
         </div>
-
-
-      </header>
+      </div>
+      <div className="hero-right">
+        <img src={resumeImg} alt="Resume Holder" />
+      </div>
+      <div className="hero-detail">
+        <img src={DetailImg} alt="Details" />
+      </div>
+    </div>
+  </section>
+</div>
 
       {/* Services Section */}
-      <section className="services-section">
+      <section className="services-section" id = 'services'>
   <div className="service-card">
     <div className="service-card-icon">
       <div className="icon-wrapper">
+
+        <img src={waveBg} alt="Wave Background" className="hero-wave-bg" />
         <img src={resume} alt="Resume icon" />
       </div>
     </div>
@@ -124,40 +132,40 @@ export default function Dashboard() {
         </div>
       </section>
 
-      <section className="action-cards">
-  <button className="action-card">
-    <span className="action-card-icon">
-      <img src={Ats} alt="ATS Score" className="img" />
-    </span>
-    <span className="action-card-text">
-      Scan your resume for ATS compatibility, keyword match, and formatting. Get instant AI feedback to improve and stand out.
-    </span>
-    <span className="action-card-arrow">➤</span>
-  </button>
+    <section className="action-cards">
+      <button className="action-card">
+        <span className="action-card-icon">
+          <img src={Ats} alt="ATS Score" className="img" />
+        </span>
+        <span className="action-card-text">
+          Scan your resume for ATS compatibility, keyword match, and formatting. Get instant AI feedback to improve and stand out.
+        </span>
+        <span className="action-card-arrow">➤</span>
+      </button>
 
-  <button className="action-card">
-    <span className="action-card-icon">
-      <img src={coverl} alt="Cover letter" className="img" />
-    </span>
-    <span className="action-card-text">
-      Generate a personalized cover letter from your resume and job description. Save time and apply with confidence.
-    </span>
-    <span className="action-card-arrow">➤</span>
-  </button>
+      <button className="action-card">
+        <span className="action-card-icon">
+          <img src={coverl} alt="Cover letter" className="img" />
+        </span>
+        <span className="action-card-text">
+          Generate a personalized cover letter from your resume and job description. Save time and apply with confidence.
+        </span>
+        <span className="action-card-arrow">➤</span>
+      </button>
 
-  <button className="action-card">
-    <span className="action-card-icon">
-      <img src={interview} alt="Interview icon" className="img" />
-    </span>
-    <span className="action-card-text">
-      Practice with AI-powered mock interviews tailored to your role. Get instant feedback and boost your confidence.
-    </span>
-    <span className="action-card-arrow">➤</span>
-  </button>
-</section>
+      <button className="action-card">
+        <span className="action-card-icon">
+          <img src={interview} alt="Interview icon" className="img" />
+        </span>
+        <span className="action-card-text">
+          Practice with AI-powered mock interviews tailored to your role. Get instant feedback and boost your confidence.
+        </span>
+        <span className="action-card-arrow">➤</span>
+      </button>
+    </section>
 
 
-      <footer className="dashboard-footer">
+      {/* <footer className="dashboard-footer">
         <div className="footer-content">
           <div className="footer-column contact-column">
             <h4>Got a question or facing a problem? Let’s talk</h4>
@@ -192,7 +200,8 @@ export default function Dashboard() {
           </div>
         </div>
         <div className="footer-bottom">Copyright 2025</div>
-      </footer>
+      </footer> */}
+    <Footer />
     </div>
   );
 }
